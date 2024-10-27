@@ -2,15 +2,24 @@ body{
    background-color: #182128; 
 }
 
+.section {
+    height: 100vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 nav{
     background-color: #293138;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 110px;
-    margin-left:6%;
-    margin-right: 6% ;
+    height: 120px;
+    /* margin-left:6%;
+    margin-right: 6% ; */
     margin-top: 80px;
     padding-left: 1%;
     padding-right: 1%;
@@ -57,3 +66,56 @@ li{
 #github{
     margin-right: 20px;
 }
+
+.about-me-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin-left:6%;
+    margin-right: 6% ; */
+}
+
+.pic-container{
+    height: 500px;
+    width: 500px;
+    border-color:#163551 ;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 100%;
+}
+
+.profile-image{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+.about-me-text{
+    display: flex;
+    flex-direction: column;
+    width: 37%;
+}
+
+.my-name{
+    color: #fff;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-me-para{
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: .9;
+}
+
+.down-errow-container{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-end;
+}
+
+
