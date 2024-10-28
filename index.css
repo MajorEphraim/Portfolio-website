@@ -2,7 +2,7 @@ body{
    background-color: #182128; 
 }
 
-.section {
+#home-section {
     height: 100vh;
     padding-left: 10%;
     padding-right: 10%;
@@ -72,13 +72,12 @@ li{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    /* margin-left:6%;
-    margin-right: 6% ; */
+    padding-top: 150px;
 }
 
 .pic-container{
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
     border-color:#163551 ;
     border-width: 10px;
     border-style: solid;
@@ -92,31 +91,149 @@ li{
 }
 
 .about-me-text{
-    display: flex;
-    flex-direction: column;
-    width: 37%;
+    /* display: flex;
+    flex-direction: column; */
+    width: 36%;
 }
 
 .my-name{
     color: #fff;
     font-size: 60px;
     font-family: Arial, Helvetica, sans-serif;
+    margin-bottom:0;
 }
 
 .about-me-para{
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     opacity: .97;
+    margin-top: 30px;
 }
 
 .down-errow-container{
-    height: 200px;
+    /* height: 100px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:flex-end;
 }
+
+
+#projects-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 165px;
+    padding-right: 165px;
+}
+
+.section-heading{
+    font-size: 55px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.apps{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.thumbnail{
+    height: 440px;
+    width: auto;
+}
+
+.app-logo{
+    height: 60px;
+    width: auto;
+}
+
+.project-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 500px;
+    width: 680px; 
+}
+
+.name-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.app-description-container{
+    /* width: 25%; */
+    display: -webkit-box;           /* Displays text in a flexible box */
+    -webkit-box-orient: vertical;   /* Sets the box orientation */
+    -webkit-line-clamp: 13;          /* Limits text to 3 lines */
+    overflow: hidden; 
+    margin-bottom: 20px;
+}
+
+.logo-btn-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 50px;
+    height: 85%;
+}
+
+.app-name{
+    font-size: 35px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    margin-right: 35px;
+}
+
+.app-description{
+    font-size: 17px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    opacity: .9;
+}
+
+.dbtn-text{
+    font-size: 13px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.vbtn-text{
+    font-size: 13px;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.button{
+    height: 27px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+#dbtn{
+    background-color: #03BC03;
+}
+
+#vbtn{
+    background-color: #DBDCDD;
+}
+
 
 

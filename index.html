@@ -6,16 +6,17 @@
     <title>Ephraim Ncube Porfolio</title>
     <link rel="stylesheet" href="index.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <section id="section1" class="section">
+    <section id="home-section" class="section">
         <nav>
             <p class="welcome-text">Welcome</p>
             
             <ul>
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#projects" class="nav-link">My projects</a></li>
-                <li><a href="#projects" class="nav-link">Contact</a></li>
+                <li><a href="#home-section" class="nav-link">Home</a></li>
+                <li><a href="#projects-section" class="nav-link">My projects</a></li>
+                <li><a href="#contact-section" class="nav-link">Contact</a></li>
             </ul>
             
             <div class="both-logos-container">
@@ -35,15 +36,102 @@
             </div>
             <div class="about-me-text">
                 <p class="my-name">Ephraim Ncube</p>
-                <p class="about-me-para">I’m a final-year software engineering student with a development journey that began in 2020. Before university, I built a strong foundation in front-end development and Firebase, creating web and mobile apps using HTML, CSS, JavaScript, React, and React Native. My university experience deepened my technical knowledge in databases, data structures, Agile methodologies, .NET, SQL, and systems programming, equipping me with the skills to tackle complex, full-stack projects. I’m passionate about building innovative, user-centered solutions and eager to contribute my expertise to impactful projects.</p>
+                <p class="about-me-para">I’m a final-year information technology student with a development journey that began in 2020. Before university, I built a strong foundation in front-end development and Firebase, creating web and mobile apps using HTML, CSS, JavaScript, React, and React Native. My university experience deepened my technical knowledge in databases, data structures, Agile methodologies, .NET, SQL, and systems programming, equipping me with the skills to tackle complex, full-stack projects. I’m passionate about building innovative, user-centered solutions and eager to contribute my expertise to impactful projects.</p>
             </div>
         </div>
 
         <div class="down-errow-container" >
-            <span style="font-size:150px; color: #163551;">
+            <a href="#projects-section">
+            <span style="font-size:120px; color: #163551;">
                 <i class="fa-solid fa-chevron-down"></i>
             </span>
+            </a>
         </div>
+        </section>
+
+        <section id="projects-section" class="section">
+            <p class="section-heading">My projects</p>
+            <div id="mobile-apps" class="apps">
+
+                <div class="project-container">
+                    <div class="thumbnail-container">
+                        <img src="./assets/globii.jpg" alt="globii" class="thumbnail"/>
+                    </div>
+                    <div class="logo-btn-info">
+                       <div>
+                            <div class="name-logo">
+                                <p class="app-name">Globii</p>
+                                <img src="./assets/globii logo.png" class="app-logo"/>
+                            </div>
+                            <div class="app-description-container">
+                                <p class="app-description">Globii is a dynamic platform connecting individuals facing professional challenges with experts, students, tutors, and skilled problem-solvers. Designed to facilitate timely, quality-driven solutions, Globii allows users to post questions on specific subjects, work tasks, or projects, which responders can address to earn recognition and financial rewards. By bridging the gap between problem creators and knowledgeable solvers, Globii empowers users with access to expertise while incentivizing quality support, creating a collaborative and resourceful environment for continuous learning and professional growth.</p>
+                            </div>
+                       </div>
+                        <div class="buttons">
+                            <div class="button" id="dbtn">
+                                <p class="dbtn-text">Download Apk</p>
+                            </div>
+                            <div class="button" id="vbtn">
+                                <p class="vbtn-text">View Code</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-container">
+                    <div class="thumbnail-container">
+                        <img src="./assets/metro.jpg" alt="metro" class="thumbnail"/>
+                    </div>
+                    <div class="logo-btn-info">
+                        <div>
+                            <div class="name-logo">
+                                <p class="app-name">Metro Booking</p>
+                                <img src="./assets/metro logo.png" class="app-logo"/>
+                            </div>
+                            <div class="app-description-container">
+                                <p class="app-description">About Metrorail Booking Metrorail Booking is a mobile platform designed to simplify train travel with a seamless booking experience. Users can easily reserve train tickets from their smartphones, receive virtual tickets, and access up-to-date train schedules in real-time. With its focus on convenience and accessibility, Metrorail Booking enhances the travel experience, empowering users to manage their journeys with ease and confidence.</p>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <div class="button" id="dbtn">
+                                <p class="dbtn-text">Download Apk</p>
+                            </div>
+                            <div class="button" id="vbtn">
+                                <p class="vbtn-text">View Code</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- 
+                <div class="project-container">
+                    <div class="thumbnail-container">
+                        <img src="./assets/signsay.png" alt="metro" class="thumbnail"/>
+                    </div>
+                    <div class="logo-btn-info">
+                        <div class="name-logo">
+                            <p class="app-name">SignSay</p>
+                            <img src="./assets/signsay logo.png" class="app-logo"/>
+                        </div>
+                        <div class="app-description-container">
+                            <p class="app-description">SignSay is an innovative accessibility app that translates spoken language into sign language through animated visuals on-screen. Designed to bridge communication gaps for the Deaf and Hard of Hearing communities, SignSay allows spoken words to be instantly converted into sign language animations, enhancing inclusivity and supporting seamless interaction in real-time. With SignSay, users gain a powerful tool for fostering understanding and accessibility in everyday conversations.</p>
+                        </div>
+                        <div class="buttons">
+                            <div class="button" id="dbtn">
+                                <p class="dbtn-text">Download Apk</p>
+                            </div>
+                            <div class="button" id="vbtn">
+                                <p class="vbtn-text">View Code</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <div id="websites" class="apps">
+
+            </div>
+
         </section>
     
 </body>
