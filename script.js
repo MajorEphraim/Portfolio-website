@@ -5,7 +5,8 @@ const myApps = [
 ]
 
 const myWebApps = [
-    {id:"1", name:'PicPica', thumbnail:"picpica.jpg", icon:"picpica logo.png",description:"PicPica is an interactive gambling platform that combines entertainment and skill with a unique twist. Users can select cards featuring engaging animal pictures, and if they choose the correct one, their balance increases. For those who want to explore the game first, PicPica offers a demo mode where players can enjoy the gameplay without logging in. This feature ensures an easy entry for new users while adding a fun, animal-themed layer to the gambling experience.", repo:"https://github.com/MajorEphraim/PicPica"},
+    {id:"1", name:'PicPica', thumbnail:"./assets/picpica.png", icon:"./assets/picpica_logo.png",description:"PicPica is an interactive gambling platform that combines entertainment and skill with a unique twist. Users can select cards featuring engaging animal pictures, and if they choose the correct one, their balance increases. For those who want to explore the game first, PicPica offers a demo mode where players can enjoy the gameplay without logging in. This feature ensures an easy entry for new users while adding a fun, animal-themed layer to the gambling experience.", repo:"https://github.com/MajorEphraim/PicPica"},
+    {id:"2", name:'Calculator',thumbnail:"./assets/basic_calculator.png", icon:"./assets/picpica_logo.png", description:"This project is a simple yet functional calculator built using vanilla JavaScript, HTML, and CSS. It demonstrates my ability to create interactive web applications from scratch, utilizing fundamental web technologies. This calculator project not only showcases my coding skills but also emphasizes my understanding of user interface design and interaction principles. It serves as a practical example of how to apply basic programming concepts to create a functional tool.", repo:"https://github.com/MajorEphraim/basic-calculator"},
 ]
 
 const mobile_apps_div = document.getElementById("mobile-apps")
@@ -45,6 +46,35 @@ const projectAppender = (name, desc, thumbnail, logo, repo, apk)=>{
     return container
 }
 
+const webProjAppender = (name, desc, thumbnail, logo, repo, apk)=>{
+    const container = document.createElement('div')
+    container.className = "web-project-container"
+    container.innerHTML = 
+    
+    `
+                    <div class="name-logo">
+                            <p class="app-name">${name}</p>
+                            <img src=${logo} class="app-logo"/>
+                        </div>
+                        <div class="web-thumbnail-container">
+                            <img src=${thumbnail} alt="metro" class="web-thumbnail"/>
+                        </div>
+                        <div>
+                            <p class="app-description">${desc}</p>
+                        </div>
+                        <div class="buttons">
+                            <div class="button" id="dbtn">
+                                <p class="dbtn-text">Visit Site</p>
+                            </div>
+                            <div class="button" id="vbtn">
+                                <p class="vbtn-text">View Code</p>
+                            </div>
+                    </div>
+
+    `
+    return container
+}
+
 const appendApps = ()=>{
     let counter = 0;
 
@@ -66,6 +96,26 @@ const appendApps = ()=>{
     if (counter >0)
         mobile_apps_div.appendChild(projectAppender(app.name, app.description, app.thumbnail, app.icon, app.repo, app.apk))
 
+
+    let counter2 = 0;
+
+    while (counter2<myWebApps.length-1) {
+
+        const twoAppsContainer = document.createElement('div')
+        twoAppsContainer.className = "two-apps"
+
+        web_apps_div.appendChild(twoAppsContainer)
+        const j = counter2
+        
+        for(let i =j; i<=j+1;i++){
+            const webApp = myWebApps[i]
+            twoAppsContainer.appendChild(webProjAppender(webApp.name, webApp.description, webApp.thumbnail, webApp.icon, webApp.repo, webApp.apk))
+        }
+        counter2+=2
+    }
+    const webApp = myWebApps[counter2]
+    if (counter2 >0)
+        web_apps_div.appendChild(webProjAppender(webApp.name, webApp.description, webApp.thumbnail, webApp.icon, webApp.repo, webApp.apk))
 
 }
 
