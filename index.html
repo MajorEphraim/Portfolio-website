@@ -9,10 +9,23 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="drawer">
+        <div class="close-btn-container">
+            <span id="close-btn">
+                <i class="fa-solid fa-xmark" style="color: #fff;font-size: 30px;"></i>
+            </span>
+        </div>
+        
+            <ul class="mobile-nav-list">
+                <li><a href="#home-section" class="nav-link" onclick="closeDrawer()">Home</a></li>
+                <li><a href="#projects-section" class="nav-link" onclick="closeDrawer()">My projects</a></li>
+                <li><a href="#contact-section" class="nav-link" onclick="closeDrawer()">Contact</a></li>
+            </ul>
+    </div>
     <section id="home-section" class="section">
         <nav>
             <div class="menu-welcome">
-                <span class="menu-bar" style="font-size:40px; color: #fff; opacity: .85;">
+                <span id="menu-bar" class="menu-bar" style="font-size:40px; color: #fff; opacity: .85;">
                     <i class="fa-solid fa-bars"></i>
                 </span>
                 <p class="welcome-text">Welcome</p>

@@ -1,7 +1,7 @@
 const myApps = [
     {id:"1", name:'Globbi', thumbnail:"./assets/globii.jpg", icon:"./assets/globii_logo.png",description:"Globii is a dynamic platform connecting individuals facing professional challenges with experts, students, tutors, and skilled problem-solvers. Designed to facilitate timely, quality-driven solutions, Globii allows users to post questions on specific subjects, work tasks, or projects, which responders can address to earn recognition and financial rewards. By bridging the gap between problem creators and knowledgeable solvers, Globii empowers users with access to expertise while incentivizing quality support, creating a collaborative and resourceful environment for continuous learning and professional growth.", repo:"https://github.com/MajorEphraim/globii", apk:null},
+    {id:"3", name:'SignSay', thumbnail:"./assets/signsay.jpg", icon:"./assets/signsay_logo.png",description:"SignSay is an innovative accessibility app that translates spoken language into sign language through animated visuals on-screen. Designed to bridge communication gaps for the Deaf and Hard of Hearing communities, SignSay allows spoken words to be instantly converted into sign language animations, enhancing inclusivity and supporting seamless interaction in real-time. With SignSay, users gain a powerful tool for fostering understanding and accessibility in everyday conversations", repo:"https://github.com/MajorEphraim/SignSay", apk:null},
     {id:"2", name:'Metro Booking', thumbnail:"./assets/metro.jpg", icon:"./assets/metro_logo.png",description:"Metrorail Booking is a mobile platform designed to simplify train travel with a seamless booking experience. Users can easily reserve train tickets from their smartphones, receive virtual tickets, and access up-to-date train schedules in real-time. With its focus on convenience and accessibility, Metrorail Booking enhances the travel experience, empowering users to manage their journeys with ease and confidence.", repo:"https://github.com/MajorEphraim/metrorail-booking", apk:null},
-    //{id:"3", name:'SignSay', thumbnail:"./assets/signsay.png", icon:"./assets/signsay_logo.png",description:"SignSay is an innovative accessibility app that translates spoken language into sign language through animated visuals on-screen. Designed to bridge communication gaps for the Deaf and Hard of Hearing communities, SignSay allows spoken words to be instantly converted into sign language animations, enhancing inclusivity and supporting seamless interaction in real-time. With SignSay, users gain a powerful tool for fostering understanding and accessibility in everyday conversations", repo:"https://github.com/MajorEphraim/SignSay", apk:null}
 ]
 
 const myWebApps = [
@@ -12,6 +12,23 @@ const myWebApps = [
 
 const mobile_apps_div = document.getElementById("mobile-apps")
 const web_apps_div = document.getElementById("websites")
+
+const drawer_div = document.querySelector(".drawer")
+const menu_bar = document.getElementById('menu-bar')
+const close_btn = document.getElementById('close-btn')
+
+const openDrawer = ()=>{
+
+    drawer_div.style.animation = "open-drawer 1s forwards"
+}
+
+const closeDrawer = ()=>{
+    drawer_div.style.animation = "close-drawer .4s forwards"
+}
+
+
+menu_bar.addEventListener('click', openDrawer)
+close_btn.addEventListener('click', closeDrawer)
 
 const projectAppender = (name, desc, thumbnail, logo, repo, apk)=>{
     
@@ -58,7 +75,7 @@ const webProjAppender = (name, desc, thumbnail, logo, repo, apk)=>{
     container.innerHTML = 
     
     `
-                    <div class="name-logo">
+                        <div class="web-name-logo">
                             <p class="app-name">${name}</p>
                             <img src=${logo} class="app-logo"/>
                         </div>
@@ -75,7 +92,7 @@ const webProjAppender = (name, desc, thumbnail, logo, repo, apk)=>{
                             <div class="button" id="vbtn">
                                 <p class="vbtn-text">View Code</p>
                             </div>
-                    </div>
+                        </div>
 
     `
     return container
@@ -126,3 +143,5 @@ const appendApps = ()=>{
 }
 
 appendApps()
+
+
