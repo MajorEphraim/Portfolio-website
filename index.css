@@ -18,11 +18,13 @@ nav{
     justify-content: space-between;
     align-items: center;
     height: 120px;
-    /* margin-left:6%;
-    margin-right: 6% ; */
     margin-top: 80px;
     padding-left: 1%;
     padding-right: 1%;
+}
+
+.menu-bar{
+    display: none;
 }
 
 .welcome-text{
@@ -153,9 +155,6 @@ li{
     display: flex;
     flex-direction: column;
     margin-bottom: 80px;
-}
-
-.apps{
     background-color: #293138;
     padding: 30px;
 }
@@ -166,7 +165,6 @@ li{
     flex-direction: row;
     justify-content: space-between;
 }
-
 
 
 .thumbnail{
@@ -193,11 +191,15 @@ li{
     align-items: center;
 }
 
+.mobile-name-logo{
+    display: none;
+}
+
 .app-description-container{
-    /* width: 25%; */
-    display: -webkit-box;           /* Displays text in a flexible box */
-    -webkit-box-orient: vertical;   /* Sets the box orientation */
-    -webkit-line-clamp: 13;          /* Limits text to 3 lines */
+
+    display: -webkit-box;          
+    -webkit-box-orient: vertical;  
+    -webkit-line-clamp: 13;          
     overflow: hidden; 
     margin-bottom: 20px;
 }
@@ -276,3 +278,239 @@ li{
 }
 
 
+
+
+/* Extra Small Devices (Mobile) */
+@media (max-width: 425px) {
+    /* Styles for small screens */
+ 
+    
+    #home-section {
+        height: 100vh;
+        padding-left: 6px;
+        padding-right: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    nav{
+        background-color: #293138;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .menu-bar{
+        display: block;
+        margin-right: 12px;
+    }
+
+    .menu-welcome{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-list{
+        display: none;
+    }
+
+    .logo {
+        height: 40px;
+        width: 40px;
+        opacity: .85;
+    }
+    
+    .welcome-text{
+        color: #fff;
+        opacity: .85;
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .about-me-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .my-name{
+        color: #fff;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom:0;
+    }
+
+    .about-me-para{
+        color: #fff;
+        font-size: 15px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        opacity: .97;
+        margin-top: 15px;
+    }
+
+    
+    .about-me-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .down-errow{
+        font-size: 5px;
+    }
+
+    .down-errow-container{
+        /* height: 100px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:flex-end;
+        margin-bottom: 30px;
+    }
+
+    .pic-container{
+        height: 350px;
+        width: 350px;
+        border-color:#163551 ;
+        border-width: 6px;
+        border-style: solid;
+        border-radius: 100%;
+
+    }
+    
+    #projects-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .section-heading{
+        font-size: 36px;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .heading-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projects-heading{
+        font-size: 30px;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .apps{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin-bottom: 80px;
+        background-color: #182128; 
+    }
+
+    .two-apps{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #293138;
+        height: 1100px;
+        width: 118%;
+        margin-bottom: 40px;
+        padding-top: 20px;
+    }
+
+    .logo-btn-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .thumbnail-container{
+        margin-bottom: 0;
+    }
+
+    .thumbnail{
+        height: 500px;
+        width: auto;
+    }
+
+    .app-name{
+        font-size: 27px;
+    }
+    
+    .app-logo{
+        height: 50px;
+        width: auto;
+    }
+    
+    .mobile-name-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; /* Centers items without extra spacing */
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+        
+    .name-logo {
+       display: none;
+    }
+        
+    .app-description-container{  
+        display: block;
+        -webkit-line-clamp: unset;
+        overflow: visible;     
+        overflow: hidden; 
+        margin-bottom: 20px;
+        width:250px ;
+    }
+
+    .app-description{
+        font-size: 15px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 10px; /* Adds space between the buttons */
+        justify-content: center; /* Centers the buttons in the container */
+        width: 100%; /* Ensures they spread across the container */
+    }
+    
+    
+
+    
+  }
+  
+  /* Small Devices (Tablets) */
+  @media (max-width: 768px) {
+    /* Styles for tablets */
+  }
+  
+  /* Medium Devices (Small Laptops) */
+  @media (max-width: 1024px) {
+    /* Styles for small laptops */
+  }

@@ -1,12 +1,13 @@
 const myApps = [
     {id:"1", name:'Globbi', thumbnail:"./assets/globii.jpg", icon:"./assets/globii_logo.png",description:"Globii is a dynamic platform connecting individuals facing professional challenges with experts, students, tutors, and skilled problem-solvers. Designed to facilitate timely, quality-driven solutions, Globii allows users to post questions on specific subjects, work tasks, or projects, which responders can address to earn recognition and financial rewards. By bridging the gap between problem creators and knowledgeable solvers, Globii empowers users with access to expertise while incentivizing quality support, creating a collaborative and resourceful environment for continuous learning and professional growth.", repo:"https://github.com/MajorEphraim/globii", apk:null},
     {id:"2", name:'Metro Booking', thumbnail:"./assets/metro.jpg", icon:"./assets/metro_logo.png",description:"Metrorail Booking is a mobile platform designed to simplify train travel with a seamless booking experience. Users can easily reserve train tickets from their smartphones, receive virtual tickets, and access up-to-date train schedules in real-time. With its focus on convenience and accessibility, Metrorail Booking enhances the travel experience, empowering users to manage their journeys with ease and confidence.", repo:"https://github.com/MajorEphraim/metrorail-booking", apk:null},
-    {id:"3", name:'SignSay', thumbnail:"./assets/signsay.png", icon:"./assets/signsay_logo.png",description:"SignSay is an innovative accessibility app that translates spoken language into sign language through animated visuals on-screen. Designed to bridge communication gaps for the Deaf and Hard of Hearing communities, SignSay allows spoken words to be instantly converted into sign language animations, enhancing inclusivity and supporting seamless interaction in real-time. With SignSay, users gain a powerful tool for fostering understanding and accessibility in everyday conversations", repo:"https://github.com/MajorEphraim/SignSay", apk:null}
+    //{id:"3", name:'SignSay', thumbnail:"./assets/signsay.png", icon:"./assets/signsay_logo.png",description:"SignSay is an innovative accessibility app that translates spoken language into sign language through animated visuals on-screen. Designed to bridge communication gaps for the Deaf and Hard of Hearing communities, SignSay allows spoken words to be instantly converted into sign language animations, enhancing inclusivity and supporting seamless interaction in real-time. With SignSay, users gain a powerful tool for fostering understanding and accessibility in everyday conversations", repo:"https://github.com/MajorEphraim/SignSay", apk:null}
 ]
 
 const myWebApps = [
     {id:"1", name:'PicPica', thumbnail:"./assets/picpica.png", icon:"./assets/picpica_logo.png",description:"PicPica is an interactive gambling platform that combines entertainment and skill with a unique twist. Users can select cards featuring engaging animal pictures, and if they choose the correct one, their balance increases. For those who want to explore the game first, PicPica offers a demo mode where players can enjoy the gameplay without logging in. This feature ensures an easy entry for new users while adding a fun, animal-themed layer to the gambling experience.", repo:"https://github.com/MajorEphraim/PicPica"},
     {id:"2", name:'Calculator',thumbnail:"./assets/basic_calculator.png", icon:"./assets/picpica_logo.png", description:"This project is a simple yet functional calculator built using vanilla JavaScript, HTML, and CSS. It demonstrates my ability to create interactive web applications from scratch, utilizing fundamental web technologies. This calculator project not only showcases my coding skills but also emphasizes my understanding of user interface design and interaction principles. It serves as a practical example of how to apply basic programming concepts to create a functional tool.", repo:"https://github.com/MajorEphraim/basic-calculator"},
+    
 ]
 
 const mobile_apps_div = document.getElementById("mobile-apps")
@@ -19,7 +20,12 @@ const projectAppender = (name, desc, thumbnail, logo, repo, apk)=>{
     container.innerHTML = 
 
      ` 
+            <div class="mobile-name-logo">
+                        <p class="app-name">${name}</p>
+                        <img src=${logo} class="app-logo"/>
+                    </div>
             <div class="thumbnail-container">
+
                 <img src=${thumbnail} alt=${name} class="thumbnail" />
             </div>
             <div class="logo-btn-info">
