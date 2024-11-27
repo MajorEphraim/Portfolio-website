@@ -98,50 +98,51 @@ const webProjAppender = (name, desc, thumbnail, logo, repo, apk)=>{
     return container
 }
 
-const appendApps = ()=>{
+const appendApps = () => {
+    // Append mobile apps
     let counter = 0;
 
-    while (counter<myApps.length-1) {
+    while (counter < myApps.length - 1) {
+        const twoAppsContainer = document.createElement('div');
+        twoAppsContainer.className = "two-apps";
 
-        const twoAppsContainer = document.createElement('div')
-        twoAppsContainer.className = "two-apps"
-
-        mobile_apps_div.appendChild(twoAppsContainer)
-        const j = counter
-        
-        for(let i =j; i<=j+1;i++){
-            const app = myApps[i]
-            twoAppsContainer.appendChild(projectAppender(app.name, app.description, app.thumbnail, app.icon, app.repo, app.apk))
+        // Append two apps
+        for (let i = 0; i < 2 && counter < myApps.length; i++, counter++) {
+            const app = myApps[counter];
+            twoAppsContainer.appendChild(projectAppender(app.name, app.description, app.thumbnail, app.icon, app.repo, app.apk));
         }
-        counter+=2
+        mobile_apps_div.appendChild(twoAppsContainer);
     }
-    const app = myApps[counter]
-    if (counter >0)
-        mobile_apps_div.appendChild(projectAppender(app.name, app.description, app.thumbnail, app.icon, app.repo, app.apk))
 
+    // Append the last app if not appended
+    if (counter < myApps.length) {
+        const app = myApps[counter];
+        mobile_apps_div.appendChild(projectAppender(app.name, app.description, app.thumbnail, app.icon, app.repo, app.apk));
+    }
 
+    // Append web apps
     let counter2 = 0;
 
-    while (counter2<myWebApps.length-1) {
+    while (counter2 < myWebApps.length - 1) {
+        const twoAppsContainer = document.createElement('div');
+        twoAppsContainer.className = "two-apps";
 
-        const twoAppsContainer = document.createElement('div')
-        twoAppsContainer.className = "two-apps"
-
-        web_apps_div.appendChild(twoAppsContainer)
-        const j = counter2
-        
-        for(let i =j; i<=j+1;i++){
-            const webApp = myWebApps[i]
-            twoAppsContainer.appendChild(webProjAppender(webApp.name, webApp.description, webApp.thumbnail, webApp.icon, webApp.repo, webApp.apk))
+        // Append two apps
+        for (let i = 0; i < 2 && counter2 < myWebApps.length; i++, counter2++) {
+            const webApp = myWebApps[counter2];
+            twoAppsContainer.appendChild(webProjAppender(webApp.name, webApp.description, webApp.thumbnail, webApp.icon, webApp.repo, webApp.apk));
         }
-        counter2+=2
+        web_apps_div.appendChild(twoAppsContainer);
     }
-    const webApp = myWebApps[counter2]
-    if (counter2 >0)
-        web_apps_div.appendChild(webProjAppender(webApp.name, webApp.description, webApp.thumbnail, webApp.icon, webApp.repo, webApp.apk))
 
-}
+    // Append the last web app if not appended
+    if (counter2 < myWebApps.length) {
+        const webApp = myWebApps[counter2];
+        web_apps_div.appendChild(webProjAppender(webApp.name, webApp.description, webApp.thumbnail, webApp.icon, webApp.repo, webApp.apk));
+    }
+};
 
-appendApps()
+appendApps();
+
 
 
