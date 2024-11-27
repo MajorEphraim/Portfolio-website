@@ -293,9 +293,6 @@ li{
 #contact-section{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-left: 150px;
-    padding-right: 150px;
 }
 
 /* Contact Section */
@@ -371,6 +368,12 @@ li{
     margin-bottom: 50px;
 }
 
+.para-container{
+    width: '100%';
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
 
 
@@ -677,8 +680,59 @@ li{
         height: auto;
         width: 100%;
     }
-    
 
+    .section-para{
+        color: #fff;
+        font-size: 20px;
+        opacity: .85;
+    }
+    
+    .contact-methods{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    
+    .method{
+        color: #fff;
+        font-size: 33px;
+        opacity: .85;
+        margin: 0;
+        margin-left: 10px;
+    }
+    
+    .text{
+        color: #fff;
+        font-size: 22px;
+        opacity: .65;
+        margin: 0;
+    }
+    
+    .method-heading{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: '100%';
+        margin-bottom: 10px;
+    }
+    
+    .method-container{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 300px;
+        margin: auto;
+    }
     
   }
   
