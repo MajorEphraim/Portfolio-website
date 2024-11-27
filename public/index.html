@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ephraim Ncube Porfolio</title>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="drawer">
+        <div class="close-btn-container">
+            <span id="close-btn">
+                <i class="fa-solid fa-xmark" style="color: #fff;font-size: 30px;"></i>
+            </span>
+        </div>
+        
+            <ul class="mobile-nav-list">
+                <li><a href="#home-section" class="nav-link" onclick="closeDrawer()">Home</a></li>
+                <li><a href="#projects-section" class="nav-link" onclick="closeDrawer()">My projects</a></li>
+                <li><a href="#contact-section" class="nav-link" onclick="closeDrawer()">Contact</a></li>
+            </ul>
+    </div>
+    <section id="home-section" class="section">
+        <nav>
+            <div class="menu-welcome">
+                <span id="menu-bar" class="menu-bar" style="font-size:40px; color: #fff; opacity: .85;">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+                <p class="welcome-text">Welcome</p>
+            </div>
+            
+            <ul class="nav-list">
+                <li><a href="#home-section" class="nav-link">Home</a></li>
+                <li><a href="#projects-section" class="nav-link">My projects</a></li>
+                <li><a href="#contact-section" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="both-logos-container">
+                <div class="logo-container">
+                    <a href="https://github.com/MajorEphraim?tab=repositories"><img src="./assets/github.png" alt="github" class="logo" id="github"/></a>
+                </div>
+                <div class="logo-container">
+                    <a href="www.linkedin.com/in/ephraim-ncube-534b48217"><img src="./assets/linkedin.png" alt="linkedin" class="logo"/></a>
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+                </div>
+            </div>
+        </nav>
+        
+        <div class="about-me-container">
+            <div class="pic-container">
+                <img src="./assets/profile image.jpg" class="profile-image"/>
+            </div>
+            <div class="about-me-text">
+                <p class="my-name">Ephraim Ncube</p>
+                <p class="about-me-para">I’m a final-year information technology student with a development journey that began in 2020. Before university, I built a strong foundation in front-end development and Firebase, creating web and mobile apps using HTML, CSS, JavaScript, React, and React Native. My university experience deepened my technical knowledge in databases, data structures, Agile methodologies, .NET, SQL, and systems programming, equipping me with the skills to tackle complex, full-stack projects. I’m passionate about building innovative, user-centered solutions and eager to contribute my expertise to impactful projects.</p>
+            </div>
+        </div>
+
+        <div class="down-errow-container" >
+            <a href="#projects-section">
+            <span style="font-size:120px; color: #163551;" class="down-errow">
+                <i class="fa-solid fa-chevron-down"></i>
+            </span>
+            </a>
+        </div>
+        </section>
+
+        <section id="projects-section" class="section">
+            <p class="section-heading">My projects</p>
+            <div class="heading-container">
+                <p class="projects-heading">Mobile Apps</p>
+            </div>
+            <div id="mobile-apps" class="apps">    
+            </div>
+            <div class="heading-container">
+                <p class="projects-heading">Websites & Web Apps</p>
+            </div>
+            <div id="websites" class="apps">
+                
+            </div>
+
+        </section>
+
+        <section id="contact-section" class="section">
+            <div class="para-container">
+                <p class="section-heading">Contact</p>
+            </div>
+            <div class="para-container">
+                <p class="section-para">Get in touch with me here</p>
+            </div>
+            <div class="contact-methods">
+                <div class="details-method">
+                    <div class="method-container">
+                        <div class="method-heading">
+                            <span>
+                                <i class="fa-solid fa-address-card" style="color: #fff; font-size: 35px;"></i>
+                            </span>
+                            <p class="method">My number</p>
+                        </div>
+                        <p class="text">068 082 1897</p>
+                    </div>
+
+                    <div class="method-container">
+                        <div class="method-heading">
+                            <span>
+                                <i class="fa-solid fa-envelope" style="color: #fff; font-size: 35px;"></i>
+                            </span>
+                            <p class="method">My Email</p>
+                        </div>
+                        <p class="text">Ncube.ephraimt@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="contact-form" onsubmit="sendMessage(event)">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    
+</body>
+</html>
