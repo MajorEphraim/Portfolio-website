@@ -6,8 +6,8 @@ const myApps = [
 ]
 
 const myWebApps = [
-    {id:"1", name:'PicPica', thumbnail:"./assets/picpica.png", icon:"./assets/picpica_logo.png",description:"PicPica is an interactive gambling platform that combines entertainment and skill with a unique twist. Users can select cards featuring engaging animal pictures, and if they choose the correct one, their balance increases. For those who want to explore the game first, PicPica offers a demo mode where players can enjoy the gameplay without logging in. This feature ensures an easy entry for new users while adding a fun, animal-themed layer to the gambling experience.", repo:"https://github.com/MajorEphraim/PicPica"},
-    {id:"2", name:'Calculator',thumbnail:"./assets/basic_calculator.png", icon:"./assets/picpica_logo.png", description:"This project is a simple yet functional calculator built using vanilla JavaScript, HTML, and CSS. It demonstrates my ability to create interactive web applications from scratch, utilizing fundamental web technologies. This calculator project not only showcases my coding skills but also emphasizes my understanding of user interface design and interaction principles. It serves as a practical example of how to apply basic programming concepts to create a functional tool.", repo:"https://github.com/MajorEphraim/basic-calculator"},
+    {id:"1", name:'PicPica', thumbnail:"./assets/picpica.png", icon:"./assets/picpica_logo.png",description:"PicPica is an interactive gambling platform that combines entertainment and skill with a unique twist. Users can select cards featuring engaging animal pictures, and if they choose the correct one, their balance increases. For those who want to explore the game first, PicPica offers a demo mode where players can enjoy the gameplay without logging in. This feature ensures an easy entry for new users while adding a fun, animal-themed layer to the gambling experience.", repo:"https://github.com/MajorEphraim/PicPica", site:"https://picpica-309f4.web.app/"},
+    {id:"2", name:'Calculator',thumbnail:"./assets/basic_calculator.png", icon:"./assets/picpica_logo.png", description:"This project is a simple yet functional calculator built using vanilla JavaScript, HTML, and CSS. It demonstrates my ability to create interactive web applications from scratch, utilizing fundamental web technologies. This calculator project not only showcases my coding skills but also emphasizes my understanding of user interface design and interaction principles. It serves as a practical example of how to apply basic programming concepts to create a functional tool.", repo:"https://github.com/MajorEphraim/basic-calculator", site:"https://basic-calculator-d743a.web.app"},
 ]
 
 const mobile_apps_div = document.getElementById("mobile-apps")
@@ -16,6 +16,21 @@ const web_apps_div = document.getElementById("websites")
 const drawer_div = document.querySelector(".drawer")
 const menu_bar = document.getElementById('menu-bar')
 const close_btn = document.getElementById('close-btn')
+
+const sendMessage = (event)=> {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const subject = encodeURIComponent(`New message from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    const mailtoLink = `mailto:ncube.ephraimt@gmail.com?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink;
+}
+
 
 const openDrawer = ()=>{
 
@@ -57,7 +72,9 @@ const projectAppender = (name, desc, thumbnail, logo, repo, apk)=>{
                 </div>
                 <div class="buttons">
                     <div class="button" id="dbtn">
-                        <p class="dbtn-text">Download Apk</p>
+                       <a href = ${apk}>
+                         <p class="dbtn-text">Download Apk</p>
+                        </a>
                     </div>
                     <div class="button" id="vbtn">
                         <a href = ${repo}>
@@ -71,7 +88,8 @@ const projectAppender = (name, desc, thumbnail, logo, repo, apk)=>{
     return container
 }
 
-const webProjAppender = (name, desc, thumbnail, logo, repo, apk)=>{
+const webProjAppender = (name, desc, thumbnail, logo, repo, site)=>{
+    console.log("SITE:::"+site, " THUMBNAIL:::"+thumbnail)
     const container = document.createElement('div')
     container.className = "web-project-container"
     container.innerHTML = 
@@ -82,14 +100,16 @@ const webProjAppender = (name, desc, thumbnail, logo, repo, apk)=>{
                             <img src=${logo} class="app-logo"/>
                         </div>
                         <div class="web-thumbnail-container">
-                            <img src=${thumbnail} alt="metro" class="web-thumbnail"/>
+                            <img src=${thumbnail} alt=${name} class="web-thumbnail"/>
                         </div>
                         <div>
                             <p class="app-description">${desc}</p>
                         </div>
                         <div class="buttons">
                             <div class="button" id="dbtn">
+                             <a href = ${site}>
                                 <p class="dbtn-text">Visit Site</p>
+                            </a>
                             </div>
                             <div class="button" id="vbtn">
                                 <a href = ${repo}>
@@ -134,7 +154,7 @@ const appendApps = () => {
         // Append two apps
         for (let i = 0; i < 2 && counter2 < myWebApps.length; i++, counter2++) {
             const webApp = myWebApps[counter2];
-            twoAppsContainer.appendChild(webProjAppender(webApp.name, webApp.description, webApp.thumbnail, webApp.icon, webApp.repo, webApp.apk));
+            twoAppsContainer.appendChild(webProjAppender(webApp.name, webApp.description, webApp.thumbnail, webApp.icon, webApp.repo, webApp.site));
         }
         web_apps_div.appendChild(twoAppsContainer);
     }
@@ -142,7 +162,7 @@ const appendApps = () => {
     // Append the last web app if not appended
     if (counter2 < myWebApps.length) {
         const webApp = myWebApps[counter2];
-        web_apps_div.appendChild(webProjAppender(webApp.name, webApp.description, webApp.thumbnail, webApp.icon, webApp.repo, webApp.apk));
+        web_apps_div.appendChild(webProjAppender(webApp.name, webApp.description, webApp.thumbnail, webApp.icon, webApp.repo, webApp.site));
     }
 };
 
